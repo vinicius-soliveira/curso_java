@@ -63,7 +63,7 @@ public class Loops {
 				} while(contador < 5); 
 		
 				
-				// Estruturas de repetição com o comando for:
+		// Estruturas de repetição com o comando for:
 				System.out.println("\nExemplo  - Loop for:\n");
 				
 				for(contador = 1; contador <=5; contador++){
@@ -87,7 +87,16 @@ public class Loops {
 					System.out.println("Contador: " + contador);
 				}
 				
-
+		// Estruturas de repetição aninhada com o comando for:		
+				
+				System.out.println("\nExemplo  - repetição aninhada:\n");
+				for(int i=0; i<3;i++) {
+					for(int j=0;j<10;j+=5) {
+						System.out.printf("%d%d\n",i,j);
+					}
+				}
+				
+				
 	}
 
 }
