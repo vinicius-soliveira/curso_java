@@ -167,19 +167,13 @@ public class telaTriangulo  {
 						msgTipoTriangulo.setForeground(Color.GREEN);
 						msgTipoTriangulo.setText("O triângulo formado é escaleno!!!");
 						
-					}
-					
-					
-				} else {
+					}		
+				 } else {
 					
 					msgTriangulo.setForeground(Color.RED);
 					msgTriangulo.setText("Estes valores não formam um triângulo!!!");
 					msgTipoTriangulo.setText(" ");
 				}
-				
-				
-				
-				
 					
 			}
 		});
