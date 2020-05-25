@@ -25,15 +25,16 @@ import java.awt.color.ColorSpace;
 import java.math.*;
 
 
-public class telaTriangulo {
+public class telaTriangulo  {
 
 	private JFrame frame;
 	
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	public void initialize() {
+	private void initialize() {
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setBounds(100, 100, 607, 384);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -132,7 +133,7 @@ public class telaTriangulo {
 		msgTriangulo.setBounds(0, 10, 394, 53);
 		panel.add(msgTriangulo);
 		
-		
+		panel.setVisible(false);
 		
 		JButton botaoVerificar = new JButton("Verificar");
 		botaoVerificar.addActionListener(new ActionListener() {
@@ -209,7 +210,7 @@ public class telaTriangulo {
 	 */
 	public telaTriangulo() {
 		initialize();
-		panel.setVisible(false);
+		
 		
 	}
 	
