@@ -13,10 +13,12 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+
+
 public class Calculadora {
 
 	private JFrame frame;
-	private JTextField tela;
+	static private JTextField tela;
 	private JButton btn1;
 	private JButton btn2;
 	private JButton btn3;
@@ -34,33 +36,14 @@ public class Calculadora {
 	private JButton btnExponenciacao;
 	private JButton btnDivisao;
 	private JPanel panel;
-	double termo1;
-	double termo2;
 	boolean ponto;
+	double valor1;
+	double valor2;
+	String op;
 	
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Calculadora window = new Calculadora();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
-	public Calculadora() {
-		initialize();
-	}
+	
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -83,6 +66,23 @@ public class Calculadora {
 		btnCalcule.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btnCalcule.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				switch(op) {
+				case "+":
+					
+					break;
+				case "-":
+					break;
+				case "*":
+					break;
+				case "/":
+					break;
+				default:
+					System.out.println("Operação inválida");
+				
+				
+				
+				}
 				
 				
 			}
@@ -138,7 +138,9 @@ public class Calculadora {
 		btnSoma = new JButton("+");
 		btnSoma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				operacao(btnSoma);
 			}
+			 
 		});
 		btnSoma.setFont(new Font("Arial", Font.BOLD, 14));
 		btnSoma.setBounds(199, 10, 53, 35);
@@ -167,6 +169,7 @@ public class Calculadora {
 		btnSubtracao = new JButton("-");
 		btnSubtracao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				operacao(btnSubtracao);
 			}
 		});
 		btnSubtracao.setFont(new Font("Arial", Font.BOLD, 14));
@@ -228,6 +231,7 @@ public class Calculadora {
 		btnExponenciacao = new JButton("^");
 		btnExponenciacao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				operacao(btnExponenciacao);
 			}
 		});
 		btnExponenciacao.setFont(new Font("Arial", Font.BOLD, 14));
@@ -237,6 +241,9 @@ public class Calculadora {
 		btnMultiplicacao = new JButton("*");
 		btnMultiplicacao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				operacao(btnMultiplicacao);
+				System.out.println(valor1);
+				System.out.println(op );
 			}
 		});
 		btnMultiplicacao.setFont(new Font("Arial", Font.BOLD, 14));
@@ -246,6 +253,7 @@ public class Calculadora {
 		btnDivisao = new JButton("/");
 		btnDivisao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				operacao(btnDivisao);
 			}
 		});
 		btnDivisao.setFont(new Font("Arial", Font.BOLD, 14));
@@ -254,4 +262,32 @@ public class Calculadora {
 		
 		
 	}
+	
+	
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculadora window = new Calculadora();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Calculadora() {
+		initialize();
+	}
+	
+	
 }

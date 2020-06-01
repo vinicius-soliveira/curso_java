@@ -17,11 +17,9 @@ public class rotinas {
 	}
 	
 	public static void main(String[] args) {
-		
 		soma(4,8);
 		int sub = subtracao(9,5);
 		System.out.println("A subtração de 9 e 5 é: "+ sub);
-		
 		
 	}
 	
